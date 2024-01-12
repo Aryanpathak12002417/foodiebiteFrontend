@@ -115,9 +115,9 @@ export default function MoreInfo() {
   }
   
   return (
-    <section className='h-screen flex justify-center items-center font-jernin'>
+    <section className='flex justify-center items-center font-jernin mt-4'>
       <div className='md:w-[50vw] p-7 text-blackrounded-lg relative rounded-xl'>
-        <div className='mb-5 top-[-30px]'>
+        <div className='mb-8 top-[-30px]'>
           <img className='hover:scale-105 hover:rounded-md hover:cursor-pointer' onClick={prevPage} src={backButton}/>
         </div>
         <div>
@@ -232,7 +232,7 @@ export default function MoreInfo() {
   }      
 
 
-<button type="submit" onClick={nextPage} class="flex items-center justify-center text-white bg-blue-700 mt-5 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+<button type="submit" onClick={nextPage} class="flex items-center justify-center text-white bg-[#FF3131] mt-5 hover:bg-[#FF3139] focus:ring-4 focus:outline-none focus:ring-[#ee565b] font-medium rounded-lg text-sm px-5 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
   {index==1?"Save Detail":"Next Page"} <img className='ml-2' src={rightImage} alt="" /></button>
         </div>
       </div>
