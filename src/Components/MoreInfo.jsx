@@ -137,17 +137,17 @@ export default function MoreInfo() {
     </div>
     <div class="mb-5">
       <label htmlFor="state" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">State</label>
-      <input type="text" id="state" value={state} onChange={onChangeState} className={`shadow-sm ${isState?'bg-gray-50 border border-gray-300 text-gray-900':'bg-red-50 border border-red-500 text-red-900'} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light`} required/>
+      <input type="text" id="state" value={state} onChange={onChangeState} className={`shadow-sm ${isState?'bg-gray-50 border border-gray-300 text-gray-900':'bg-red-50 border border-red-500 text-red-900'} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light`} placeholder='Gujrat' required/>
     {isState?"":<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Please </span>enter your state</p>}
     </div>
     <div class="mb-5">
       <label htmlFor="city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
-      <input type="text" id="city" value={city} onChange={onChangeCity} className={`shadow-sm ${isCity?'bg-gray-50 border border-gray-300 text-gray-900':'bg-red-50 border border-red-500 text-red-900'} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light`} required/>
+      <input type="text" id="city" value={city} onChange={onChangeCity} className={`shadow-sm ${isCity?'bg-gray-50 border border-gray-300 text-gray-900':'bg-red-50 border border-red-500 text-red-900'} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light`} placeholder='Ahemdabad' required/>
     {isCity?"":<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Please </span>enter your city</p>}
     </div>
     <div class="mb-5">
       <label htmlFor="pincode" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Pincode</label>
-      <input type="number" id="pincode" value={pincode} onChange={onChangePincode} className={`shadow-sm ${isPincode?'bg-gray-50 border border-gray-300 text-gray-900':'bg-red-50 border border-red-500 text-red-900'} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light`} required/>
+      <input type="number" id="pincode" value={pincode} onChange={onChangePincode} className={`shadow-sm ${isPincode?'bg-gray-50 border border-gray-300 text-gray-900':'bg-red-50 border border-red-500 text-red-900'} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light`} placeholder='320008' required/>
       {isPincode?"":<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Please</span> check your pincode</p>}
     </div>
     <div class="mb-5">
