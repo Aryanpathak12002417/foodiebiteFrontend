@@ -1,10 +1,10 @@
 import React from 'react'
 import Navbar from './Navbar.jsx'
-import deliveryBoy from '../Images/Deliveryboy.png'
-import profile from '../Images/profile.jpg'
+import deliveryBoy from '../Images/Deliveryboy.webp'
+import profile from '../Images/profile.webp'
 import profile1 from '../Images/reviewImg1.jpg'
-import profile2 from '../Images/reviewImg2.jpg'
-import profile3 from '../Images/reviewImg3.jpg'
+import profile2 from '../Images/reviewImg2.webp'
+import profile3 from '../Images/reviewImg3.webp'
 import star from '../Images/star.png'
 
 
