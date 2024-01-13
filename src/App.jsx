@@ -8,6 +8,7 @@ function App() {
     <>
       <Navbar/>
       {/* <MoreInfo/> */}
+      <span>footer</span>
     </>
   )
 }
