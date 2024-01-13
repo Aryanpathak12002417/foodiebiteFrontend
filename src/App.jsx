@@ -8,6 +8,7 @@ function App() {
     <>
       <Hero/>
       {/* <MoreInfo/> */}
+      <span>footer</span>
     </>
   )
 }
