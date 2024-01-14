@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../Images/logo2.png'
-import profile from '../Images/profile.jpg'
+import profile from '../Images/profile.webp'
 
 export default function Navbar() {
   return (
