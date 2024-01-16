@@ -43,7 +43,7 @@ export default function QuickMeal() {
       };
 
   return (
-    <section className='h-screen flex flex-col items-center bg-[#F2F5F9] relative'>
+    <section className='h-screen flex flex-col items-center bg-[#f5f8fbbd] relative'>
         <div className='absolute top-14 right-10 opacity-70'>
             <img src={bgImage1} className='object-contain h-32 w-32 transparent-bg rotate-[20deg]'/>
         </div>  
