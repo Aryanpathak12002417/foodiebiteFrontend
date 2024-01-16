@@ -27,7 +27,7 @@ export default function Hero() {
                 </div>
                 <div className='relative flex justify-center items-center'>
 
-                    <div className='bg-[#ffffffd8] shadow-lg font-jernin rounded-xl py-3 px-4 absolute top-[85px] right-[90px] flex justify-center items-center hover:scale-125'>
+                    <div className='bg-[#ffffffd8] border-2 border-b-[#f4f4f4] shadow-lg font-jernin rounded-xl cursor-pointer py-3 px-4 absolute top-[85px] right-[90px] flex justify-center items-center hover:scale-125'>
                         <div>
                             <div className='text-md font-bold mr-2'>John Smith</div>
                             <div className='text-xs font-medium'>Delivery boy</div>
@@ -41,7 +41,7 @@ export default function Hero() {
                     {/* <div className='h-10 bg-[#fffbfb] bac blur-sm w-full absolute bottom-0 z-30 opacity-35 drop-shadow-2xl'></div> */}
 
 
-                    <div className='bg-[#fff] shadow-xl font-jernin rounded-xl py-3 px-4 absolute bottom-[95px] z-20 left-[27px] flex flex-col justify-center items-center'>
+                    <div className='bg-[#fff] border-2 border-[#e5e3e36a] shadow-xl font-jernin rounded-xl py-3 px-4 absolute bottom-[75px] z-20 left-[-27px] flex flex-col justify-center items-center'>
                         <div className='flex h-30 '>
                             <img className='h-12 w-12 object-cover rounded-full border-[3px] border-[#FF3131]' src={profile}/>
                             <img className='h-12 w-12 object-cover rounded-full border-[3px] border-[#31a6ff]' src={profile2}/>
