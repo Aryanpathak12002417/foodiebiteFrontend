@@ -1,0 +1,13 @@
+.slider{
+    width: inherit;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    transition: all 0.3s;
+}
+
+.image{
+    width: 250px;
+    margin:0 10px;
+    transition: all 0.3s;
+}

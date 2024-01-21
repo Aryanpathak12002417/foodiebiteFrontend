@@ -5,6 +5,7 @@ import veg3 from '../Images/veg3.jpg'
 import veg4 from '../Images/veg4.jpg'
 import veg5 from '../Images/veg5.jpg'
 import bgImage1 from '../Images/bgFood1.png'
+import Slider from './slider/Slider'
 
 export default function QuickMeal() {
 
@@ -52,7 +53,8 @@ export default function QuickMeal() {
         </div>
             <div className='grid md:grid-cols-2 grow overflow-x-hidden mt-10'>
                 <div className='flex justify-center items-center overflow-hidden'>
-                    {renderImages()}
+                    {/* {renderImages()} */}
+                    {<Slider/>}
                 </div>
                 <div className='flex justify-center flex-col pl-8 '>
                     <h3 className='text-6xl font-jernin text-gray-900 font-bold'>Today's <span className='text-[#FF3131]'>Dilicous</span> Meals for your plate</h3>

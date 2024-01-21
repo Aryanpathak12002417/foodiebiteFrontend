@@ -8,6 +8,7 @@ import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import SignUp from "./Components/SignUp/SIgnUp";
 import './common.css'
 import QuickMeal from "./Components/QuickMeal";
+import Slider from "./Components/slider/Slider";
 function App() {
   return (
     // <Router>
