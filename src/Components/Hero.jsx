@@ -10,18 +10,18 @@ import star from '../Images/star.png'
 
 export default function Hero() {
   return (
-    <div className='h-screen flex flex-col'>
+    <div className='md:h-screen flex flex-col'>
         <Navbar/>
-        <div className='grid md:grid-cols-2 relative grow overflow-x-hidden'>
-                <div className='flex justify-center items-center'>
+        <div className='grid md:grid-cols-2 md:relative md:grow overflow-x-hidden'>
+                <div className='flex justify-center items-center px-3'>
                     <div className='flex flex-col md:max-w-[70%] text-gray-900'>
-                        <div className='text-6xl font-jernin font-bold'>Get Your <span className='text-[#FF3131]'>Daily</span> Meals Delivered On Time</div>
+                        <div className='text-4xl md:text-6xl font-jernin font-bold'>Get Your <span className='text-[#FF3131]'>Daily</span> Meals Delivered On Time</div>
                         <div className='text-gray-600 mt-6 font-jernin font-medium'>
                         Delight in daily doorstep meals. Fresh, varied, and hassle-free. Enjoy delicious, healthy options tailored to your taste. Order now for a stress-free dining experience.
                         </div>
                         <div className='mt-20'>
-                            <span className='py-3 px-12 mr-5 bg-[#FF3131] text-white rounded-2xl cursor-pointer'>Order Now</span>
-                            <span className='py-3 px-12 mr-5 border hover:bg-slate-900 hover:text-white transition-colors cursor-pointer border-slate-900 text-black rounded-2xl'>Know Us</span>
+                            <span className='py-2 px-8 mr-2 md:py-3 md:px-12 md:mr-5 bg-[#FF3131] text-white rounded-2xl cursor-pointer'>Order Now</span>
+                            <span className='py-2 px-8 md:py-3 md:px-12 md:mr-5 border hover:bg-slate-900 hover:text-white transition-colors cursor-pointer border-slate-900 text-black rounded-2xl'>Know Us</span>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ export default function Hero() {
                     {/* <div className='absolute bottom-1'>
                         <img src={deliveryBoy} className='object-scale-down'/>
                     </div> */}
-                    <img src={deliveryBoy} className=' absolute object-contain scale-125 z-10'/>
+                    <img src={deliveryBoy} className='md:absolute object-contain scale-125 z-10'/>
                     
                 </div>
         </div>

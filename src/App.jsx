@@ -8,30 +8,33 @@ import PageNotFound from "./Components/PageNotFound/PageNotFound";
 import SignUp from "./Components/SignUp/SIgnUp";
 import './common.css'
 import QuickMeal from "./Components/QuickMeal";
+import Tutorial from "./Components/Tutorial";
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/login" element={<Login />} />
-    //     <Route path="/" element={<>
-    //       <QuickMeal/>
-    //     </>} />
-    //     <Route
-    //       path="/signup"
-    //       element={
-    //         <>
-    //           <Navbar />
-    //           <MoreInfo />
-    //         </>
-    //       }
-    //     />
-    //     <Route path="*" element={<PageNotFound/>}/>
-    //   </Routes>
-    // </Router>
-    <>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<>
           <Hero/>
           <QuickMeal/>
-    </>
+          <Tutorial/>
+        </>} />
+        <Route
+          path="/signup"
+          element={
+            <>
+              <Navbar />
+              <MoreInfo />
+            </>
+          }
+        />
+        <Route path="*" element={<PageNotFound/>}/>
+      </Routes>
+    </Router>
+    // <>
+    //       <Hero/>
+    //       <QuickMeal/>
+    // </>
   );
 }
 
