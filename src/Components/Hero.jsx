@@ -13,19 +13,19 @@ export default function Hero() {
     <div className='md:h-screen flex flex-col'>
         <Navbar/>
         <div className='grid md:grid-cols-2 md:relative md:grow overflow-x-hidden'>
-                <div className='flex justify-center items-center px-3'>
-                    <div className='flex flex-col md:max-w-[70%] text-gray-900'>
+                <div className='mt-8 md:mt-0 flex justify-center items-center px-3'>
+                    <div className='flex flex-col px-5 md:px-0 md:max-w-[70%] text-gray-900'>
                         <div className='text-4xl md:text-6xl font-jernin font-bold'>Get Your <span className='text-[#FF3131]'>Daily</span> Meals Delivered On Time</div>
                         <div className='text-gray-600 mt-6 font-jernin font-medium'>
                         Delight in daily doorstep meals. Fresh, varied, and hassle-free. Enjoy delicious, healthy options tailored to your taste. Order now for a stress-free dining experience.
                         </div>
                         <div className='mt-20'>
                             <span className='py-2 px-8 mr-2 md:py-3 md:px-12 md:mr-5 bg-[#FF3131] text-white rounded-2xl cursor-pointer'>Order Now</span>
-                            <span className='py-2 px-8 md:py-3 md:px-12 md:mr-5 border hover:bg-slate-900 hover:text-white transition-colors cursor-pointer border-slate-900 text-black rounded-2xl'>Know Us</span>
+                            <span className='hidden md:blockpy-2 px-8 md:py-3 md:px-12 md:mr-5 border hover:bg-slate-900 hover:text-white transition-colors cursor-pointer border-slate-900 text-black rounded-2xl'>Know Us</span>
                         </div>
                     </div>
                 </div>
-                <div className='relative flex justify-center items-center'>
+                <div className='hidden md:flex relative justify-center items-center mt-8 md:mt-0'>
 
                     <div className='bg-[#ffffffd8] border-2 border-b-[#f4f4f4] shadow-lg font-jernin rounded-xl cursor-pointer py-3 px-4 absolute top-[85px] right-[90px] flex justify-center items-center hover:scale-125'>
                         <div>
@@ -41,7 +41,7 @@ export default function Hero() {
                     {/* <div className='h-10 bg-[#fffbfb] bac blur-sm w-full absolute bottom-0 z-30 opacity-35 drop-shadow-2xl'></div> */}
 
 
-                    <div className='bg-[#fff] border-2 border-[#e5e3e36a] shadow-xl font-jernin rounded-xl py-3 px-4 absolute bottom-[75px] z-20 left-[-27px] flex flex-col justify-center items-center'>
+                    <div className='bg-[#fff] border-2 border-[#e5e3e36a] shadow-xl font-jernin rounded-xl py-3 px-4 absolute bottom-[75px] z-20 left-[-27px] hidden md:flex flex-col justify-center items-center'>
                         <div className='flex h-30 '>
                             <img className='h-12 w-12 object-cover rounded-full border-[3px] border-[#FF3131]' src={profile}/>
                             <img className='h-12 w-12 object-cover rounded-full border-[3px] border-[#31a6ff]' src={profile2}/>
@@ -60,7 +60,7 @@ export default function Hero() {
                     {/* <div className='absolute bottom-1'>
                         <img src={deliveryBoy} className='object-scale-down'/>
                     </div> */}
-                    <img src={deliveryBoy} className='md:absolute object-contain scale-125 z-10'/>
+                    <img src={deliveryBoy} className='h-[70vh] absolute object-contain scale-125 z-10'/>
                     
                 </div>
         </div>

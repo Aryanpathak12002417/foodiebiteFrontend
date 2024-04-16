@@ -5,6 +5,7 @@ import veg3 from '../Images/veg3.jpg'
 import veg4 from '../Images/veg4.jpg'
 import veg5 from '../Images/veg5.jpg'
 import bgImage1 from '../Images/bgFood1.png'
+import Slider from './slider/Slider'
 
 // export default function QuickMeal() {
 
@@ -105,6 +106,19 @@ export default function QuickMeal() {
             <QuickMealCard imageUrl={veg4}/>
             <QuickMealCard imageUrl={veg5}/>
             <QuickMealCard imageUrl={veg3}/>
+            {/* <div className='grid md:grid-cols-2 grow overflow-x-hidden mt-10'>
+                <div className='flex justify-center items-center overflow-hidden'> */}
+                    {/* {renderImages()} */}
+                    {/* {<Slider/>} */}
+                {/* </div>
+                <div className='flex justify-center flex-col pl-8 '>
+                    <h3 className='text-6xl font-jernin text-gray-900 font-bold'>Today's <span className='text-[#FF3131]'>Dilicous</span> Meals for your plate</h3>
+                    <div className='md:max-w-md mt-10 font-jernin text-gray-600'>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, facilis fugiat maxime repellendus neque veritatis tempora excepturi! Sunt necessitatibus iure sed officiis facere, atque nobis natus.</p>
+                    </div>
+                    <span className='mt-6 py-2 px-4 md:max-w-[120px] bg-[#FF3131] text-white rounded-2xl cursor-pointer'>Order Now</span>
+                </div>
+        </div> */}
         </div>
     </div>
   )

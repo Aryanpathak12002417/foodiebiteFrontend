@@ -1,8 +1,13 @@
 import React from 'react'
 import logo from '../Images/logo2.png'
 import profile from '../Images/profile.webp'
+import { Link } from 'react-router-dom'
+import DashBoard from './DashBoard'
+
 
 export default function Navbar() {
+
+
   return (
     <div className='flex justify-between items-center p-4 shadow-md border-b-[1.5px]'>
         <div className='flex justify-center items-center'>
@@ -12,7 +17,9 @@ export default function Navbar() {
         <div className=' hidden md:block'>
           <ul className='flex'>
             <li className='mx-4 lg:mx-6 font-jernin md:text-md lg:text-lg font-medium cursor-pointer'>Home</li>
-            <li className='mx-4 lg:mx-6 font-jernin md:text-md lg:text-lg font-medium cursor-pointer'>Dashboard</li>
+            <li className='mx-4 lg:mx-6 font-jernin md:text-md lg:text-lg font-medium cursor-pointer'>
+              <Link to={"/dashboard"} target='_blank'>Dashboard</Link>
+            </li>
             <li className='mx-4 lg:mx-6 font-jernin md:text-md lg:text-lg font-medium cursor-pointer'>Pricing</li>
             <li className='mx-4 lg:mx-6 font-jernin md:text-md lg:text-lg font-medium cursor-pointer'>About us</li>
           </ul>
