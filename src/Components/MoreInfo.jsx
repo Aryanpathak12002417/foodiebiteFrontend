@@ -1,4 +1,5 @@
 import React,{useState}from 'react'
+import axios from 'axios'
 import { animated, useSpring } from '@react-spring/web'
 import rightImage from '../Images/rightArrow.svg'
 import backButton from '../Images/backButton.png'
@@ -37,6 +38,9 @@ export default function MoreInfo({index,setIndex}) {
   const [isPhone,setIsPhone]=useState(true)
   const [isPassword,setIsPassword]=useState(true)
   const [isCpassword,setIsCpassword]=useState(true)
+
+  const [otp,setOtp]=useState()
+  const[isOtp,setIsOtp]=useState(true)
 
 
 
@@ -108,6 +112,10 @@ export default function MoreInfo({index,setIndex}) {
     setPreffDinner(e.target.value)
   }
 
+  const onChangeOtp=(e)=>{
+    setOtp(e.target.value)
+  }
+
 
   const scrollinBasicInfo = useSpring({
     opacity: index==0? 1 : 0,
@@ -121,11 +129,74 @@ export default function MoreInfo({index,setIndex}) {
     opacity: index==2? 1 : 0,   
   })
 
+  const scrollInOtp = useSpring({
+    opacity: index==3?1:0
+  })
 
-  const nextPage=()=>{
-    if(index==2){
-      console.log("Form Submitted")
+
+  const nextPage= async ()=>{
+    if(index==3){
+      try{
+
+        console.log("Verifying otp")
+
+        const verifyOtp = axios.post('http://localhost:4000/user/verify-otp',{
+          email,
+          requestedOtp:otp
+        },
+        {
+          headers:{
+            'Content-Type':'application/json'
+          }
+        }
+      )
+      console.log("Otp Verifed Successfully")
+        
+          const createUser = axios.post('http://localhost:4000/user/signup',{
+            firstName,
+            lastName,
+            email,
+            password,
+            address,
+            state,
+            city,
+            pincode,
+            dateOfBirth: dob,
+            gender:gender=="male"?'M':'F',
+            breakFastTime: preffBrkfast.split(' ')[0],
+            lunchTime: preffLuch.split(' ')[0],
+            dinnerTime: preffDinner.split(' ')[0]
+        },
+        {
+          headers:{
+            'Content-Type':'application/json'
+          }
+        }
+      )
+      console.log("User created successfully")
+      }catch(err){
+        console.log("Err in creating user: "+err)
+      }
       return 
+    }
+    if(index==2){
+      try{
+          console.log("sending email")
+          const sendOtp = axios.post('http://localhost:4000/user/send-otp',{
+            email
+        },
+        {
+          headers:{
+            'Content-Type':'application/json'
+          }
+        }
+      )
+      console.log("Email Send successfully")
+      setIndex((prevIndex)=>prevIndex+1)
+      }
+      catch(err){
+        confirm.log(err)
+      }
     }
     if(index==0){
       if(firstName==""){
@@ -180,8 +251,8 @@ export default function MoreInfo({index,setIndex}) {
     <section className='flex justify-center items-center font-jernin'>
       <div className='md:w-[50vw] p-7 text-blackrounded-lg relative rounded-xl'>
         <div>
-          <h1 className='text-3xl font-jernin font-semibold'>{index==0?"Let's get started":index==1?"More Information":"Almost Done"}</h1>
-          <h3 className='text-gray-700 text-sm font-jernin pt-1'>{index==0?"Please enter your detail":index==1?"We want to know more about you. Please fill the details below":"Please choose your meal delivery time"}</h3>
+          <h1 className='text-3xl font-jernin font-semibold'>{index==0?"Let's get started":index==1?"More Information":index==2?"Almost Done":"Enter One Time Password"}</h1>
+          <h3 className='text-gray-700 text-sm font-jernin pt-1'>{index==0?"Please enter your detail":index==1?"We want to know more about you. Please fill the details below":index==2?"Please choose your meal delivery time":"send to your registered email id"}</h3>
         </div>
         <div></div>
         <div className='pt-4'>
@@ -328,11 +399,25 @@ export default function MoreInfo({index,setIndex}) {
       </div>
       </form>
     </animated.div>:""
+  } 
+
+
+    {
+    index==3?
+    <animated.div style={scrollInOtp}>
+      <form class="mx-auto grid gap-x-8 pt-2 transition-all">
+        <div class="mb-5">
+          <label htmlFor="otp" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">One time password</label>
+          <input type="text" id="otp" value={otp} onChange={onChangeOtp} className={`shadow-sm ${isCity?'bg-gray-50 border border-gray-300 text-gray-900':'bg-red-50 border border-red-500 text-red-900'} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light`} placeholder='Your Otp' required/>
+        {isOtp?"":<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Please </span>enter your otp</p>}
+        </div>
+      </form>
+    </animated.div>:""
   }      
 
 
 <button type="submit" onClick={nextPage} class="flex items-center justify-center text-white bg-[#FF3131] mt-5 hover:bg-[#FF3139] focus:ring-4 focus:outline-none focus:ring-[#ee565b] font-medium rounded-lg text-sm px-5 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-  {index==1?"Save Detail":"Next Page"} <img className='ml-2' src={rightImage} alt="" /></button>
+  {index==1 || index == 0?"Next Page":index==2?"Get Otp":"Verify Otp"} <img className='ml-2' src={rightImage} alt="" /></button>
         </div>
       </div>
     </section>
